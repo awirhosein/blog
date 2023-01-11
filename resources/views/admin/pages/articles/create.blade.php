@@ -16,7 +16,7 @@
 
             <div class="form-group">
                 <label class="text-muted">{{ __('Content') }}</label>
-                <textarea id="" name="content">{{ old('content') }}</textarea> {{-- tinymce-editor --}} 
+                <textarea class="form-control" name="content">{{ old('content') }}</textarea>
             </div>
 
             <div class="form-group">
@@ -41,7 +41,7 @@
     </div>
 
     <x-slot name="script">
-        <x-admin.tinymce-config />
+        {{-- <x-admin.tinymce-config /> --}}
         <x-admin.file-manager.script />
     </x-slot>
 

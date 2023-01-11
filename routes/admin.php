@@ -9,8 +9,8 @@ Route::namespace(Admin::class)->as('admin.')->group(function () {
     Route::middleware('admin')->group(function () {
         Route::resource('users', UserController::class);
 
-        Route::get('users/{user}/article-access', [ArticleAccessController::class, 'edit'])->name('users.article-access.edit');
-        Route::put('users/{user}/article-access', [ArticleAccessController::class, 'update'])->name('users.article-access.update');
+        Route::get('users/{user}/article-access', [Admin\ArticleAccessController::class, 'edit'])->name('users.article-access.edit');
+        Route::put('users/{user}/article-access', [Admin\ArticleAccessController::class, 'update'])->name('users.article-access.update');
     });
 
     Route::resource('articles', ArticleController::class)->middleware('can:article,article');

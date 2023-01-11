@@ -13,6 +13,6 @@ class Controller extends BaseController
 
     public function __construct()
     {
-        $this->middleware('back_url')->only('create', 'edit');
+        // $this->middleware('back_url')->only('create', 'edit');
     }
 }

@@ -35,9 +35,8 @@
             <div class="form-group">
                 <label class="text-muted">{{ __('Role') }}</label>
                 <select class="form-control" name="role">
-                    <option value="">{{ __('Select') }}</option>
-                    @foreach (\App\Models\Role::get() as $role)
-                        <option value="{{ $role->id }}">{{ __($role->name) }}</option>
+                    @foreach (\App\Models\User::ROLES as $role)
+                        <option value="{{ $role }}">{{ __($role) }}</option>
                     @endforeach
                 </select>
                 <x-admin.error name="status" />
