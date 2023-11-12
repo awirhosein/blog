@@ -3,6 +3,8 @@
 use App\Http\Controllers\Admin;
 use Illuminate\Support\Facades\Route;
 
+
+// heeeey
 Route::namespace(Admin::class)->as('admin.')->group(function () {
     Route::view('dashboard', 'admin.pages.index')->name('dashboard');
 
